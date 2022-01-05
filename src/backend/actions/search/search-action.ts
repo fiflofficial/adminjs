@@ -37,7 +37,7 @@ export const SearchAction: Action<SearchActionResponse> = {
 
     const sortBy = decorated.options?.sort?.sortBy || titlePropertyName
     const records = await resource.find(filter, {
-      limit: 50,
+      limit: 1000,
       sort: {
         sortBy,
         direction: 'asc',
